@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="gallery.js" defer></script>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Gallery</h1>
+        <div id="image-grid" class="image-grid"></div>
+    </div>
+
+    <!-- Modal for enlarged images -->
+    <div id="image-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+</body>
+</html>

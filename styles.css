@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for vertical centering */
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: rotateY(0deg);
+    transition: transform 0.5s; /* Smooth rotation transition */
+}
+
+.container:hover {
+    transform: rotateY(10deg); /* Rotate on hover for 3D effect */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+/* Glitter effect for the heading */
+.glitter {
+    background: linear-gradient(90deg, #343a40 25%, #f0f0f0 25%, #f0f0f0 50%, #343a40 50%, #343a40 75%, #f0f0f0 75%, #f0f0f0);
+    background-size: 400%;
+    animation: glitter 1.5s infinite linear;
+}
+
+@keyframes glitter {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
+/* Blinking effect for the name */
+.blinking {
+    animation: blinking 1.5s infinite;
+}
+
+@keyframes blinking {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Styles for the gallery button */
+.gallery-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.gallery-button:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Full width */
+    max-width: 700px; /* Max width for large screens */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb; /* Change color on hover */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-grid img {
+    max-width: 200px; /* Set a maximum width for the images */
+    max-height: 200px; /* Set a maximum height for the images */
+    width: auto; /* Maintain the aspect ratio */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+}
+
+.image-grid img:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
